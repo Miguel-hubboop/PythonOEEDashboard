@@ -2,7 +2,7 @@ import streamlit as st
 import plotly.graph_objs as go
 import requests
 
-response = requests.get('http://192.168.104.238:5000/plc-data')
+response = requests.get('https://yj8ityf.localto.net/plc-data')
 plc_data = response.json()['plc_data']
 st.write(plc_data)
 
