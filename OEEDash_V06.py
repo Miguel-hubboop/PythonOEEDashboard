@@ -1,9 +1,14 @@
 import streamlit as st
 import plotly.graph_objs as go
+import requests
+
+response = requests.get('http://127.0.0.1:5000/plc-data')
+plc_data = response.json()['plc_data']
+st.write(plc_data)
 
 # Dados fictícios para os gráficos
 gauge_data = [
-    {"label": "OEE", "value": 57, "color": "#7AC943"},
+    {"label": "OEE", "value": float(plc_data), "color": "#7AC943"},
     {"label": "Disponibilidade", "value": 76, "color": "#7AC943"},
     {"label": "Performance", "value": 81, "color": "#7AC943"},
     {"label": "Qualidade", "value": 92, "color": "#7AC943"},
