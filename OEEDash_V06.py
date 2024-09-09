@@ -8,7 +8,7 @@ st.write(plc_data)
 
 # Dados fictícios para os gráficos
 gauge_data = [
-    {"label": "OEE", "value": float(plc_data), "color": "#7AC943"},
+    {"label": "OEE", "value": plc_data, "color": "#7AC943"},
     {"label": "Disponibilidade", "value": 76, "color": "#7AC943"},
     {"label": "Performance", "value": 81, "color": "#7AC943"},
     {"label": "Qualidade", "value": 92, "color": "#7AC943"},
